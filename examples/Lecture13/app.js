@@ -22,7 +22,11 @@ function MsgController($scope, lovesFilter) {
   };
 
   $scope.feedYaakov = function () {
-    $scope.stateOfBeing = "fed";
+    if ($scope.stateOfBeing == "fed") {
+      $scope.stateOfBeing = "hungry";
+    } else if ($scope.stateOfBeing == "hungry") {
+      $scope.stateOfBeing = "fed";
+    }
   };
 }
 
